@@ -35,43 +35,30 @@ limitations under the License.
 
 > Return an array of an object's inherited property names and [symbols][@stdlib/symbol/ctor].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-inherited-properties
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-inheritedProperties = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-inherited-properties/tags). For example,
-
-```javascript
-inheritedProperties = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var inheritedProperties = require( 'path/to/vendor/umd/utils-inherited-properties/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.inheritedProperties;
-})();
-</script>
+var inheritedProperties = require( '@stdlib/utils-inherited-properties' );
 ```
 
 #### inheritedProperties( obj\[, level] )
@@ -105,16 +92,11 @@ var props = inheritedProperties( [ 1, 2, 3 ], 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
+var defineProperty = require( '@stdlib/utils-define-property' );
+var inheritedProperties = require( '@stdlib/utils-inherited-properties' );
 
 var hasSymbols = hasSymbolSupport();
 
@@ -158,11 +140,6 @@ if ( hasSymbols ) {
 var obj = new Foo();
 var props = inheritedProperties( obj );
 // returns [ ..., 'c', 'bip', ... ]
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -225,8 +202,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-inherited-properties.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-inherited-properties
 
-[test-image]: https://github.com/stdlib-js/utils-inherited-properties/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/utils-inherited-properties/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/utils-inherited-properties/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/utils-inherited-properties/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-inherited-properties/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-inherited-properties?branch=main
@@ -255,17 +232,17 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-inherited-properties/main/LICENSE
 
-[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor/tree/umd
+[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties/tree/umd
+[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties
 
-[@stdlib/utils/properties-in]: https://github.com/stdlib-js/utils-properties-in/tree/umd
+[@stdlib/utils/properties-in]: https://github.com/stdlib-js/utils-properties-in
 
-[@stdlib/utils/inherited-property-names]: https://github.com/stdlib-js/utils-inherited-property-names/tree/umd
+[@stdlib/utils/inherited-property-names]: https://github.com/stdlib-js/utils-inherited-property-names
 
-[@stdlib/utils/inherited-property-symbols]: https://github.com/stdlib-js/utils-inherited-property-symbols/tree/umd
+[@stdlib/utils/inherited-property-symbols]: https://github.com/stdlib-js/utils-inherited-property-symbols
 
 <!-- </related-links> -->
 
