@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import inheritedProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@esm/index.mjs';
+import inheritedProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@v0.3.0-esm/index.mjs';
 ```
 
 #### inheritedProperties( obj\[, level] )
@@ -85,7 +85,7 @@ var props = inheritedProperties( [ 1, 2, 3 ], 1 );
 import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@esm/index.mjs';
 import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@esm/index.mjs';
 import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@esm/index.mjs';
-import inheritedProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@esm/index.mjs';
+import inheritedProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-properties@v0.3.0-esm/index.mjs';
 
 var hasSymbols = hasSymbolSupport();
 
